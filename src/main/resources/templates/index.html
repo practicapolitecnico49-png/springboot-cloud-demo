@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CloudTask</title>
+</head>
+<body>
+
+<h1>Gestor de Tareas en la Nube</h1>
+
+<form action="/add" method="post">
+    <input type="text" name="title" placeholder="Nueva tarea" required>
+    <button type="submit">Agregar</button>
+</form>
+
+<ul>
+    <li th:each="task : ${tasks}" th:text="${task.title}"></li>
+</ul>
+
+</body>
+</html>
